@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white-base: #F9F9F9;
+    --black-base: #181818;
+    --grey-base: #474747;
+    --bg-card: #EBE9EA;
+    --blanket: #0e0b0b8e;
+
+    font-size: 62.5%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    min-width: 28.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background-color: var(--white-base);
+}
+
+img{
+    width: 100%;
+}
+
+.additional{
+    color: var(--white-base);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 3.139rem;
+    padding: 1.5rem 2rem;
+    background-color: var(--black-base);
+}
+
+/* HEADER */
+.main-header h2{
+    color: var(--black-base);
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 4.708rem;
+    padding: .7rem 2rem;
+}
+
+/* MAIN */
+main .store-presentation{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+    padding-inline: 2rem;
+    position: relative;
+    height: 37.7rem;
+    background-size: cover;
+    background-image: url('assets/img/Air-Jordan-1-Retro-High-OG-Wmns-TWIST-Feminino\ 2.jpg');
+}
+
+main .store-presentation::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blanket);
+}
+
+main .store-presentation h1{
+    color: var(--white-base);
+    position: relative;
+    z-index: 1;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 3.413rem;
+    text-align: left;
+    margin-bottom: 1.2rem;
+}
+
+main .store-presentation p{
+    color: var(--white-base);
+    position: relative;
+    z-index: 1;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.88rem;
+    text-align: left;
+    max-width: 46rem;
+}
+
+main .product-presentation{
+    margin: 5rem 2rem;
+}
+
+main .product-presentation header h2{
+    color: var(--black-base);
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 5.493rem;
+}
+
+main .product-presentation header p{
+    color: var(--grey-base);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.88rem;
+    margin-bottom: 5.9rem;
+}
+
+main .product-presentation .products{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-inline: auto;
+    list-style: none;
+}
+
+main .product-presentation .products .card{
+    display: flex;
+    align-items: center;
+    width: 37.4rem;
+    height: 30.2rem;
+    padding: 7.6rem 6.2rem;
+    cursor: pointer;
+    transition: 250ms;
+    background-color: var(--bg-card);
+}
+
+main .product-presentation .products .card:hover{
+    transform: rotate(-4deg);
+}
+
+/* RESPONSIVE */
+@media (min-width: 836px){
+    /* GLOBAL SETTINGS */
+    .additional{
+        font-size: 1.8rem;
+        line-height: 3.531rem;
+        padding: 1.3rem 2rem;
+    }
+
+    main .store-presentation p, main .product-presentation header p{
+        font-size: 1.8rem;
+        line-height: 3.531rem;
+    }
+
+    /* MAIN */
+    main .store-presentation{
+        padding-inline: 10rem;
+        background-image: url('assets/img/Air-Jordan-1-Retro-High-OG-Wmns-TWIST-Feminino\ 1.jpg');
+    }
+
+    main .store-presentation h1{
+        font-size: 3.2rem;
+        line-height: 3.901rem;
+        margin-bottom: 1.9rem;
+    }
+
+    main .product-presentation{
+        margin: 5.8rem 10rem 10rem;
+    }
+
+    main .product-presentation header h2{
+        font-size: 3.2rem;
+        line-height: 6.278rem;
+    }
+
+    main .product-presentation .products{
+        max-width: 1240px;
+        gap: 3.9rem 1.3rem;
+    }
+
+    main .product-presentation .products .card{
+        width: 30rem;
+        height: 30.2rem;
+        padding: 7.6rem 2.5rem;
+    }
+}
